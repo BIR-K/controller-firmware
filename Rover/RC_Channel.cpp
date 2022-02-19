@@ -218,6 +218,11 @@ bool RC_Channel_Rover::do_aux_function(const aux_func_t ch_option, const AuxSwit
         do_aux_function_change_mode(rover.mode_simple, ch_flag);
         break;
 
+    // set mode to Sniff
+    case AUX_FUNC::SNIFF:
+        do_aux_function_change_mode(rover.mode_sniff, ch_flag);
+        break;
+
     // trigger sailboat tack
     case AUX_FUNC::SAILBOAT_TACK:
         // any switch movement interpreted as request to tack

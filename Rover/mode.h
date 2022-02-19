@@ -26,6 +26,7 @@ public:
         LOITER       = 5,
         FOLLOW       = 6,
         SIMPLE       = 7,
+        SNIFF        = 8,
         AUTO         = 10,
         RTL          = 11,
         SMART_RTL    = 12,
@@ -217,6 +218,16 @@ protected:
     float _desired_yaw_cd;      // desired yaw in centi-degrees.  used in Auto, Guided and Loiter
 };
 
+class ModeSniff : public Mode
+{
+public:
+
+    uint32_t mode_number() const override { return SNIFF; }
+    const char *name4() const override { return "SNIF"; }
+
+    // methods that affect movement of the vehicle in this mode
+    void update() override;
+};
 
 class ModeAcro : public Mode
 {

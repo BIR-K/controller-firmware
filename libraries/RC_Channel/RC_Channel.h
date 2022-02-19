@@ -251,6 +251,8 @@ public:
         SCRIPTING_6 =        305,
         SCRIPTING_7 =        306,
         SCRIPTING_8 =        307,
+
+        SNIFF = 399,
     };
     typedef enum AUX_FUNC aux_func_t;
 

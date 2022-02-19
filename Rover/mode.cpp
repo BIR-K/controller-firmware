@@ -524,6 +524,9 @@ Mode *Rover::mode_from_mode_num(const enum Mode::Number num)
     case Mode::Number::SIMPLE:
         ret = &mode_simple;
         break;
+    case Mode::Number::SNIFF:
+        ret = &mode_sniff;
+        break;
     case Mode::Number::AUTO:
         ret = &mode_auto;
         break;
